@@ -27,10 +27,10 @@ cost1 = -(y' * log(h) + (1-y)' * log(1-h))/m;
 
 % regularized cost to exclude bias param.
 theta(1) = 0;
-cost2 = theta'*theta * lambda/(2*m)
+cost2 = theta'*theta * lambda/(2*m);
 
 % regularized cost
-J    = cost1 + cost2
+J = cost1 + cost2;
 
 % regularized grad
 grad = (X'*(h-y) + lambda*theta)/m;
